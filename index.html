@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Île interdite</title>
+    <link rel="icon" type="image/x-icon" href="/img/sandBagLogo.png">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="menu">
+            <h1>Île interdite</h1>
+            <form>
+                <div>
+                    <label for="nbPlayers">Nombre de joueurs : </label><input type="number" name="nbPlayers"
+                        id="nbPlayers" value=1 min=1 max=4>
+                </div>
+                <ul>
+                    <li><label for="namePlayer1">Nom du joueur : </label><input type="text" name="namePlayer1"
+                            id="namePlayer1"></li>
+                    <li><label for="namePlayer2">Nom du joueur : </label><input type="text" name="namePlayer2"
+                            id="namePlayer2"></li>
+                    <li><label for="namePlayer3">Nom du joueur : </label><input type="text" name="namePlayer3"
+                            id="namePlayer3"></li>
+                    <li><label for="namePlayer4">Nom du joueur : </label><input type="text" name="namePlayer4"
+                            id="namePlayer4"></li>
+                </ul>
+                <button type="submit">Jouer</button>
+            </form>
+        </div>
+        <div id="game">
+            <div id="waterLevelTable">
+                <div id="deadLevel" class="waterClass">
+                    <p>3</p>
+                    <div class="waterlevel"></div>
+                </div>
+                <div id="level6" class="waterClass">
+                    <p>6</p>
+                    <div class="waterlevel"></div>
+                    <div class="waterlevel"></div>
+                </div>
+                <div id="level5" class="waterClass">
+                    <p>5</p>
+                    <div class="waterlevel"></div>
+                    <div class="waterlevel"></div>
+                </div>
+                <div id="level4" class="waterClass">
+                    <p>4</p>
+                    <div class="waterlevel"></div>
+                    <div class="waterlevel"></div>
+                </div>
+                <div id="level3" class="waterClass">
+                    <p>3</p>
+                    <div class="waterlevel"></div>
+                    <div class="waterlevel"></div>
+                    <div class="waterlevel"></div>
+                </div>
+                <div id="level2" class="waterClass">
+                    <p>2</p>
+                    <div class="waterlevel"></div>
+                    <div class="waterlevel">
+                        <div id="waterMarker"></div>
+                    </div>
+                </div>
+            </div>
+            <table id="grid"></table>
+            <div id="usersDisplay">
+                <div id="playersInventorys"></div>
+
+                <div id="controls">
+                    <div>Actions : 3</div>
+                    <button id="btnMove">Se déplacer</button>
+                    <button id="btnShore" disabled>Assecher une case</button>
+                    <button id="btnArtefact" disabled>Aquérir un artefact</button>
+                    <input type="button" id="btnBag" disabled value="Utiliser un sac à sable">
+                    <button id="btnGive" disabled>Donner une carte</button>
+                    <button id="btnEnd" disabled>Finir le tour</button>
+                    <button id="btnQuit" disabled>Quitter l'île</button>
+                    <input type="button" id="btnMenu" value="Retour au menu">
+                </div>
+                <div id="playersBtn"></div>
+            </div>
+            <div id="jobCardDisplay">
+                <img src="img/pilotCard.webp" alt="">
+            </div>
+
+            <div id="hand">
+                <div>
+                    <div id="fire">
+                    </div>
+                </div>
+                <div>
+                    <div id="wind">
+                    </div>
+                </div>
+                <div>
+                    <div id="water">
+                    </div>
+                </div>
+                <div>
+                    <div id="earth">
+                    </div>
+                </div>
+                <div>
+                    <div id="bag">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="winMenu">
+            <div>
+                <img src="" alt="">
+                <p>Feliciation</p>
+                <button id="quitMenu">Revenir au menu</button>
+                <button id="restart">Recommencer</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

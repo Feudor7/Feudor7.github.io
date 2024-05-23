@@ -1,0 +1,342 @@
+
+@font-face {
+    font-family: skulls;
+    src: url(../font/SKULLX.ttf);
+}
+@font-face {
+    font-family: citadel;
+    src: url(../font/MoriaCitadel.TTF);
+}
+
+/*prevent selection*/
+* {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+
+ul {
+    list-style: none;
+}
+
+#game {
+    /* width: 1100px; */
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5px;
+}
+
+#hand {
+    width: 800px;
+    height: 195px;
+    margin: 5px 0px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 195px;
+}
+
+tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0.5px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    background-image: url("../img/water.png");
+    background-size: 15%;
+}
+
+
+#hand>* {
+    width: 17.5%;
+}
+
+#wind,
+#earth,
+#fire,
+#water,
+#bag {
+    display: flex;
+    position: relative;
+}
+
+.handCard {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 140px;
+    height: 195px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.flodded {
+    filter:contrast(76%);
+}
+
+
+#waterLevelTable, #playersInventorys {
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 230px;
+    height: 721px;
+    background-color: aqua;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.waterClass, .minInventory {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.waterClass>div {
+    flex-grow: 1;
+    border-bottom: 1px solid aliceblue;
+    width: 50%;
+    display: flex;
+}
+
+#deadLevel {
+    background-color: rgb(196, 228, 255);
+}
+
+#level6 {
+    background-color: #2E4475;
+}
+
+#level5 {
+    background-color: #335399;
+}
+
+#level4 {
+    background-color: #3761bc;
+}
+
+#level3 {
+    background-color: #4576e1;
+}
+
+#level2 {
+    background-color: #5d90ff;
+}
+
+#waterLevelTable p {
+    position: absolute;
+    align-self: flex-end;
+    font-size: 100px;
+    width : 130px;
+    height: 100px;
+    text-align: center;
+    margin: 0px;
+    
+    color: white;
+}
+
+#deadLevel p {
+    font-family: skulls;
+    color : orangered;
+}
+
+#waterMarker{
+    position: absolute;
+    background-color: red;
+    height: 30px;
+    width : 40px;
+    align-self: center;            
+    margin-left: 0.5rem;
+
+    border: 3px solid orange;
+
+    border-radius: 0.5rem 100% 100% 0.5rem;
+}
+
+#usersDisplay{
+    display: flex;
+    flex-direction: column;
+}
+
+#controls, #playersBtn {
+    flex-grow: 1;
+    max-width: 220px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0px 10px;
+    min-width: 200px;
+}
+
+#playersBtn{
+    justify-content: flex-start;
+    padding-top: 15px;
+}
+
+/* players */
+.player {
+    pointer-events: none;
+    background-color: gray;
+    border: white double 4px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    left: 40px;
+    top: 40px;
+    margin: 5px;
+}
+
+.redPawn{
+    background-color: rgb(199, 33, 33);
+}
+
+.bluePawn{
+    background-color:darkblue;
+}
+
+.greenPawn{
+    background-color: green;
+}
+
+.blackPawn{
+    background-color: black;
+}
+
+.playerZone{
+    pointer-events: none;
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#playersInventorys{
+    width: auto;
+    height: 50%;
+    flex-grow: 3;
+    margin-left: 5px;
+    margin-right: 0px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.minInventory {
+    max-height: 6rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.minInventory img{
+    height: 2.5rem;
+    width: auto;
+}
+
+.minInventory > span > span{
+    font-size: 11px;
+}
+
+#winMenu {
+    display: none;
+}
+
+#menu{
+    display: none;
+    background-color: #4169be;
+    background-image: url(../img/menuBackground.jpg);
+    background-size: 100vw 100vh;
+    align-items: start;
+    padding-left: 15rem;
+}
+#menu h1{
+    position: absolute;
+    top: 2rem;
+    font-size: 125px;
+    font-family: citadel;
+    color: rgb(209, 58, 58);
+    text-align: center;
+    width: 100%;
+    left: -2rem;
+    
+}
+
+#menu.menuShown form, #winMenu > div {    
+    background-color: rgba(221, 221, 221, 0.808);
+    border: rgb(209, 58, 58) double 5px;
+    border-radius: 3rem;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    padding: 4rem;
+}
+
+#menu.menuShown form{
+    width: 25vw;
+}
+#menu.menuShown form ul {
+    padding: 0%;
+}
+
+#menu.menuShown form button, #menu.menuShown form > div *, #menu.menuShown form ul li > *, #winMenu > div button{
+    text-align: center;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.menuShown{
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(85, 85, 85, 0.452);
+    z-index: 2;
+}
+
+#winMenu img{
+    width: 200px;
+    height: 200px;
+    border: black double 5px;
+}
+#jobCardDisplay {
+    width: 400px;
+    padding-left: 5rem;
+}
+#jobCardDisplay img{
+    width: auto;
+    height: 225px;
+    transition: 0.75s;
+    rotate: -90deg;
+}
+#jobCardDisplay img:hover{
+    height: 400px;
+    /* rotate: -90deg; */
+    transition: 0.75s;
+}
